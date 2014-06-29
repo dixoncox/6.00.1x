@@ -1,0 +1,24 @@
+CHANGES FROM XP MACHINE
+total 144
+drwxr-xr-x 3 gillazo users  4096 Apr 14 11:28 ..
+-rw-r--r-- 1 gillazo users   313 Apr 14 11:30 Work.Test.01
+-rw-r--r-- 1 gillazo users  3475 Apr 14 11:30 TEST.RectangularRoom.py~
+-rw-r--r-- 1 gillazo users  3668 Apr 14 11:30 TEST.RectangularRoom.py
+-rw-r--r-- 1 gillazo users  1549 Apr 14 11:30 TEST.PositionClass.py
+-rw-r--r-- 1 gillazo users   100 Apr 14 11:30 TEST.Dict.py
+-rw-r--r-- 1 gillazo users   100 Apr 14 11:30 testDict.py
+-rw-r--r-- 1 gillazo users   112 Apr 14 11:30 run_pkgtest.py
+-rw-r--r-- 1 gillazo users  3491 Apr 14 11:30 Room.txt
+-rw-r--r-- 1 gillazo users 24296 Apr 14 11:30 Room.docx
+-rw-r--r-- 1 gillazo users   854 Apr 14 11:30 RectangularRoomTest.py
+-rw-r--r-- 1 gillazo users  2171 Apr 14 11:30 RectangularRoomClass.py
+-rw-r--r-- 1 gillazo users  4612 Apr 14 11:30 ps7_visualize.pyc
+-rw-r--r-- 1 gillazo users  4584 Apr 14 11:30 ps7_visualize.py
+-rw-r--r-- 1 gillazo users   695 Apr 14 11:30 ps7_verify_movement27.pyc
+-rw-r--r-- 1 gillazo users   699 Apr 14 11:30 ps7_verify_movement26.pyc
+-rw-r--r-- 1 gillazo users  9192 Apr 14 11:30 ps7.py
+-rw-r--r-- 1 gillazo users 27482 Apr 14 11:30 ps7_pkgtest.pyc
+-rw-r--r-- 1 gillazo users  1511 Apr 14 11:30 PositionClassTest.py
+drwxr-xr-x 3 gillazo users  4096 Apr 14 11:31 .
+drwxr-xr-x 8 gillazo users  4096 Apr 14 12:04 .git
+-rw-r--r-- 1 gillazo users     0 Apr 14 12:05 TEST.LINUX

@@ -1,0 +1,115 @@
+Walk-through: RectangularRoom
+
+dasdevashishdas 7 days ago
+
+class RectangularRoom(object):
+    def __init__(self, width, height):
+        # store width & height
+        # Initialize a whole object usable Dict: {(0,0):False,...,(max,max):Flase}
+
+    def cleanTileAtPosition(self, pos):
+
+        # pos is a Position Object
+        # thus, have pos.?x and pos.?y
+        # can be checked in Dict as (pos.?x,pos.?x) >>> CAUTION
+
+    def isTileCleaned(self, m, n):
+        # Check dict for value
+
+    def getNumTiles(self):
+        # something * something  
+
+    def getNumCleanedTiles(self):
+        # count for True Values in Dict
+
+    def getRandomPosition(self):
+        # Make sure which kind of random method to use 
+        # return Position(random number, random number)
+
+    def isPositionInRoom(self, pos):
+        # is Position(?x,?y) in {room}
+
+Warning :
+
+BEWARE OF TYPE ERROR (The invisible one's are the worse like 0.0 and 0)
+
+REMEMBER:
+
+> print type( ) ... is your best friend
+> Position is unchangeable, try your best friend on the input output of this class 
+> use math.floor() somewhere because 0.0 is not 0  
+
+... Do tell me if this helped or you have any query? ...
+
+    
+	1 pylyp
+
+    7 days ago
+
+    Position(?x,?y) - is object, but you use tuples as keys.
+
+        No, it just a way to show. Position Object have two method in place of ?x and ?y. (i.e getX, getY)
+
+        –posted 7 days ago by dasdevashishdas
+
+        but you are trying search
+
+        is Position(?x,?y) in {room}
+
+        –posted 7 days ago by pylyp
+
+        not by this post I just giving a hint what too do not the code.
+
+        (Position.getX,Position.getY) in dict where you saved your values.
+
+        –posted 7 days ago by dasdevashishdas
+   
+   2 dim_moon
+
+    6 days ago
+
+    I have not used dictionary, just a list and removed cleaned tiles from it. I thought it would be more memory saving, though the question of memory is not really important here.
+
+        My original idea was using the list, but look at his idea, its easy to code and understand isn't it. Why do you think using list is more memory saving?
+
+        –posted 2 days ago by gunsmithy
+
+        How can you initialize such a dictionary??? How can you add all possible keys as tuples with value "NotCleaned"???
+
+        –posted about 23 hours ago by Kaulfield
+
+        Initialize it as:
+        My.NewDict = {}
+        for each number of unit in width as W:
+        for each number of unit in Height as H:
+        My.NewDict[(W,H)] = False
+
+        –posted about 16 hours ago by dasdevashishdas
+    0 SherrySmile
+
+    4 days ago
+
+    Thank you so much for posting this. It helped me a lot, especially the idea of creating a dictionary to store tile location and cleanness.
+    
+	
+    0 yoshimix
+
+    3 days ago
+
+    I have a dictionary object defined in init. How can I call this dictionary from the cleanTileAtPosition() function?
+
+        I hope you created the dictionary as self.my_dict_name. So, you can call it in any method of the same class by self.my_dict_name.
+
+        eg.
+
+          class something(Object):
+                def __init__(self,...):
+                    ....
+                    self.SomeDict = {Key:Value}
+                def new_method(self):
+                    ....
+                    self.SomeDict[Key]
+
+        –posted a day ago by dasdevashishdas
+
+Post a response:
