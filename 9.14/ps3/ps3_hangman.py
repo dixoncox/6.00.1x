@@ -117,23 +117,32 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
-    print 'Secret word length =', len(secretWord)
+    print 'Welcome to the game Hangman!'
+    print 'I am thinking of a word that is', len(secretWord),'letters long.'
     mistakesMade = 0
     lettersGuessed = ''
-    while (isWordGuessed(secretWord, lettersGuessed) == False) and (mistakesMade <= 8):
-        guess = raw_input('Please guess a  letter: ')
-        if guess not in lettersGuessed: #will only enter if letter not guessed yet
+    while (isWordGuessed(secretWord, lettersGuessed) == False) and (mistakesMade < 8):
+        print '-------------'
+        print 'You have', (8 - mistakesMade), 'guesses left.'
+        print 'Available letters:', getAvailableLetters(lettersGuessed)
+        guess = raw_input('Please guess a letter: ')
+        if guess in string.ascii_uppercase:
+            guess = guess.lower()
+        if guess not in lettersGuessed and (mistakesMade <= 8): #will only enter if letter not guessed yet
             lettersGuessed += guess
             if guess in secretWord:
-                print('Good guess:', getGuessedWord(secretWord, lettersGuessed))
+                print 'Good guess:', getGuessedWord(secretWord, lettersGuessed)
             else:
-                print('Oops! That letter is not in my word:', getGuessedWord(secretWord, lettersGuessed))
+                print 'Oops! That letter is not in my word:', getGuessedWord(secretWord, lettersGuessed)
+                mistakesMade += 1
         else:
-            print('You\'ve already guessed that letter:', getGuessedWord(secretWord, lettersGuessed))   
-        
-
-
-
+            print 'Oops! You\'ve already guessed that letter:', getGuessedWord(secretWord, lettersGuessed) 
+    print '-------------'
+    if isWordGuessed(secretWord, lettersGuessed):
+        print 'Congratulations! you won!'
+    else:
+        print 'Sorry you ran out of guesses. The word was', secretWord          
+    return None          
 
 
 # When you've completed your hangman function, uncomment these two lines
@@ -141,5 +150,5 @@ def hangman(secretWord):
 # secretWord while you're testing)
 
 #secretWord = chooseWord(wordlist).lower()
-secretWord = 'apple'
+secretWord = 'zzz'
 hangman(secretWord)
