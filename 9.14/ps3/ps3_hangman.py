@@ -118,7 +118,19 @@ def hangman(secretWord):
     '''
     # FILL IN YOUR CODE HERE...
     print 'Secret word length =', len(secretWord)
-    
+    mistakesMade = 0
+    lettersGuessed = ''
+    while (isWordGuessed(secretWord, lettersGuessed) == False) and (mistakesMade <= 8):
+        guess = raw_input('Please guess a  letter: ')
+        if guess not in lettersGuessed: #will only enter if letter not guessed yet
+            lettersGuessed += guess
+            if guess in secretWord:
+                print('Good guess:', getGuessedWord(secretWord, lettersGuessed))
+            else:
+                print('Oops! That letter is not in my word:', getGuessedWord(secretWord, lettersGuessed))
+        else:
+            print('You\'ve already guessed that letter:', getGuessedWord(secretWord, lettersGuessed))   
+        
 
 
 
@@ -128,5 +140,6 @@ def hangman(secretWord):
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
 
-# secretWord = chooseWord(wordlist).lower()
-# hangman(secretWord)
+#secretWord = chooseWord(wordlist).lower()
+secretWord = 'apple'
+hangman(secretWord)
